@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <div class="logout">
+  <div class="logout" @click="this.$router.push('/')">
     <img src="@/assets/images/logout.png" class="logout_img" alt="">
     <p>Logout</p>
   </div>
@@ -114,6 +114,7 @@ export default defineComponent({
   color: #F86868;
   font-size: 18px;
   font-family: Roboto-regular, system-ui;
+  cursor: pointer;
 
 }
 

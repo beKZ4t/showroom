@@ -19,7 +19,7 @@
           <img class="input-icon" src="@/assets/images/password.png">
           <input type="password" placeholder="Password">
         </div>
-        <button type="button" @click="this.$router.push('/')">Sign Up</button>
+        <button type="button" @click="this.$router.push('/profile')">Sign Up</button>
         <div class="create">Have an account? <div @click="this.$router.push('/')" class="red_create">Login</div></div>
       </div>
     </div>

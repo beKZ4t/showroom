@@ -1,4 +1,5 @@
 <template>
+  <div class="out_container">
   <div class="container">
   <div class="left_side">
     <div class="img">
@@ -17,6 +18,7 @@
     </div>
   </div>
   </div>
+  </div>
 </template>
 
 <script >
@@ -26,14 +28,23 @@ export default {
 </script>
 
 <style scoped>
-.container{
-  height: 300px;
+.out_container{
   width: 100%;
+  height: 300px;
   background-color: #3E6CDE;
   border-radius: 20px;
   margin-top: 62px;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+
+}
+.container{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .img_person{

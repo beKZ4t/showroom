@@ -1,11 +1,13 @@
 <template>
   <div class="cards">
+    <div class="in_cards">
     <div class="title">Video editor</div>
     <div class="website">Metry.kz</div>
     <div class="about">We need a video editor for a project, from placement to production we need support.</div>
     <div class="under_text">
       <div class="left_text">Contractual</div>
       <div class="right_text">31.12.2024</div>
+    </div>
     </div>
   </div>
 </template>
@@ -17,9 +19,13 @@ export default {
 </script>
 
 <style scoped>
-.cards{
+.in_cards{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 15px;
-  padding-left: 5%;
+}
+.cards{
   margin-top: 33px;
   margin-bottom: 24px;
   border-radius: 10px;

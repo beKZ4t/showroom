@@ -2,10 +2,10 @@
 
     <div class="output">
       <div class="navbar">
-        <div class="item"><a href="#">Search</a> </div>
-        <div class="item"><a href="#">Tasks</a> </div>
-        <div class="item"><a href="#">Requests</a> </div>
-        <div class="button">
+        <div class="item" @click="this.$router.push('/search')">Search </div>
+        <div class="item" @click="this.$router.push('/tasks')">Tasks </div>
+        <div class="item" @click="this.$router.push('/requests')">Requests </div>
+        <div class="button" @click="this.$router.push('/profile')">
           <img class="icon_img" src="@/assets/images/icon_profile.png">
           <p>Ксения</p>
         </div>
@@ -49,7 +49,8 @@ export default {
   font-size: 18px;
 
 }
-.item a{
+.item {
+  cursor: pointer;
   text-decoration: none;
   color: black;
   font-size: 22px;

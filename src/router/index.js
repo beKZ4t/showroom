@@ -5,6 +5,7 @@ import Register from "@/views/register/index.vue"
 import Profile from "@/views/profile/index.vue"
 import Search from "@/views/search/index.vue"
 import Job from "@/views/job_page/index.vue"
+import Request from "@/views/requests/index.vue"
 
 const routes = [
     {
@@ -31,6 +32,11 @@ const routes = [
         path: '/job',
         name: 'job',
         component: Job
+    },
+    {
+        path: '/requests',
+        name: 'requests',
+        component: Request
     },
 
 ]

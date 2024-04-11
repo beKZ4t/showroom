@@ -17,7 +17,7 @@
           <input type="password" placeholder="Password" v-model="password">
         </div>
         <div class="forgot">Forgot password?</div>
-        <button type="button" @click="">Login</button>
+        <button type="button" @click="this.$router.push('/profile')">Login</button>
         <div class="create">Don't have an account yet? <div class="red_create" @click="this.$router.push('/register')">Create Account</div></div>
       </div>
     </div>
