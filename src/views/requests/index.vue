@@ -6,40 +6,54 @@
       <span>Here are your responses and answers</span>
     </div>
     <search-component/>
-    <form>
-    <label for="dates">Выберите дату:</label>
-    <input type="text" id="dates" list="date-list" placeholder="he">
-    <datalist id="date-list" >
-      <option value="2024-04-10">2024-04-10</option>
-      <option value="2024-04-10">2024-04-10</option>
-      <option value="2024-04-10">2024-04-10</option>
-    </datalist>
+    <lesson-expandable-component/>
+    <accepted-cards-component/>
 
 
-      <div class="dropdown">
-        <button class="dropbtn">Select an option</button>
-        <div class="dropdown-content">
-          <a href="#">Option 1</a>
-          <a href="#">Option 2</a>
-          <a href="#">Option 3</a>
-        </div>
-      </div>
-    </form>>
   </div>
+
+
 </template>
 
-<script >
+<script>
+
 
 import {defineComponent} from "vue";
 import NavbarComponent from "@/components/navbar.vue";
 import SearchComponent from "@/components/search.vue";
+import AcceptedCardsComponent from "@/components/accepted_card.vue";
+import LessonExpandableComponent from "@/components/lesson_expandable.vue";
+import ExpanComponent from "@/components/expan.vue";
 
 export default defineComponent({
-  components: {SearchComponent, NavbarComponent}
+  components: {ExpanComponent, LessonExpandableComponent, AcceptedCardsComponent, SearchComponent, NavbarComponent}
 })
+
+
 </script>
 
 <style scoped>
+.container {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  transition: all 0.3s ease;
+}
+
+.container.expanded {
+  width: 300px;
+  height: 300px;
+}
+
+.text {
+  display: none;
+}
+
+.container.expanded .text {
+  display: block;
+}
+
+
 /* Style the dropdown button */
 .dropbtn {
   background-color: #4CAF50;
@@ -56,7 +70,7 @@ export default defineComponent({
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -83,23 +97,26 @@ export default defineComponent({
   background-color: #3e8e41;
 }
 
-.main{
+.main {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
-.header{
+
+.header {
   margin-top: 40px;
   margin-bottom: 21px;
 }
-p{
+
+p {
   font-family: Poppins-bold, system-ui;
   font-size: 30px;
   margin-bottom: 7px;
   color: #3E6CDE;
 }
-span{
+
+span {
   font-size: 18px;
-  font-family: Poppins-medium,system-ui;
+  font-family: Poppins-medium, system-ui;
 }
 </style>

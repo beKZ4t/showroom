@@ -1,7 +1,11 @@
 <template>
   <div class="cards">
     <div class="in_cards">
-      <div class="title">Video editor</div>
+      <div class="first">
+        <div class="title">Video editor</div>
+        <p>Accepted</p>
+
+      </div>
       <div class="website">Metry.kz</div>
       <div class="about">We need a video editor for a project, from placement to production we need support.</div>
       <div class="under_text">
@@ -14,60 +18,63 @@
 
 <script>
 export default {
-  name: "CardsComponent",
+  name: "AcceptedCardsComponent",
 }
 </script>
 
 <style scoped>
-.in_cards {
+.first{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first p{
+  color: #3EBB1F;
+  font-family: Poppins-medium,system-ui;
+  font-size: 16px;
+}
+.in_cards{
   width: 95%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
 }
-
-.cards {
+.cards{
   margin-top: 33px;
   margin-bottom: 24px;
   border-radius: 10px;
   height: 171px;
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
 }
-
-.title {
+.title{
   font-size: 18px;
-  font-family: Poppins-bold, system-ui;
+  font-family: Poppins-bold,system-ui;
   color: #3E6CDE;
 }
-
-.website {
-  font-family: Poppins-medium, system-ui;
+.website{
+  font-family: Poppins-medium,system-ui;
   font-size: 16px;
   margin-bottom: 8px;
   margin-top: 7px;
 }
-
-.about {
+.about{
   font-size: 16px;
   font-family: Poppins-light, system-ui;
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 49px;
 }
-
-.under_text {
+.under_text{
   display: flex;
   justify-content: space-between;
 }
-
-.left_text {
+.left_text{
   color: #3E6CDE;
   font-family: Poppins-light, system-ui;
   font-size: 16px;
 
 }
-
-.right_text {
-  font-family: Poppins-light, system-ui;
+.right_text{
+  font-family: Poppins-light,system-ui;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
   padding-right: 41px;

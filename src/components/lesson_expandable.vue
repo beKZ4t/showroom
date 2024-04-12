@@ -1,25 +1,36 @@
 <template>
-  <div class="content">
-
-    <div class="expandable-button" ref="expandableButtons" v-for="(chapter, index) in chapters" @click="setExpanded(index)" :key="index" :class="{'first-button': index === 0, 'last-button': index === chapters.length - 1}">
-      <div class="up-button">
-        <div style="flex: auto">
-          <div class="expandable-letter">{{chapter.title}}</div>
-          <div class="info-text">
-            <div class="text_second_list"> {{chapter.current}} Videos</div>
-            <img style="margin-left: 4px; margin-right: 4px;" src="../../assets/images/Ellipse.png" height="3px">
+  <div>
+    <div
+        class="expandable-button"
+        v-for="(chapter, index) in chapters"
+        :key="index"
+        :class="{ 'first-button': index === 0, 'last-button': index === chapters.length - 1 }">
+      <div class="content" @click="setExpanded(index)">
+        <div class="in_box">
+          <div class="up-button">
+            <div class="title">Video editor</div>
+            <div class="website">Metry.kz</div>
+            <div class="about">We need a video editor for a project, from placement to production we need support.</div>
+            <div class="under_text">
+              <div class="left_text">Contractual</div>
+              <div class="right_text">31.12.2024</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="show-container" :class="{'expanded': expandedIndex === index}">
-        <div class="items">
-          <div class="item" v-for="content in chapter.contentList" :key="content">
-            <div class="item_head">
-              <p>{{content.title}} </p>
-              <img src="../../assets/images/play.png" height="10px"> <span>{{content.time}}</span>
+
+        <div class="show-container" :class="{ expanded: expandedIndex === index }">
+          <div class="all_about">
+            <div class="title_about">Responsibilities:</div>
+            <ul>
+              <li>Conducting research and analyses to assess operational effectiveness, processes, and stakeholders involved in current projects.</li>
+              <li>Assisting with operational issues within ongoing projects.</li>
+              <li>Developing consistent and concise presentations and analytical notes for management teams and other stakeholders, offering analysis and recommendations to facilitate strategic decision-making.</li>
+              <li>Engaging in various facets of corporate development (e.g., mergers, acquisitions, joint ventures, investments, securing bank financing), which includes constructing complex financial models and valuations, aiding in negotiations, and more.</li>
+              <li>Proactively researching potential investment opportunities across various sectors.</li>
+            </ul>
+            <div style="display: flex; justify-content: end;">
+              <div class="button">Submit your application</div>
             </div>
-            <div v-if="content.status === 'Completed'" class="competed-container">{{content.status}}</div>
-            <div v-else-if="content.status === 'Playing'" class="playing-container">{{content.status}}</div>
           </div>
         </div>
       </div>
@@ -32,144 +43,91 @@ export default {
   name: "lesson-expandable-component",
   data() {
     return {
-      user: null,
       chapters: [
         {
           title: "Video editor",
-          totalCount: 12,
-          current: 1,
-          time: "28m",
-          contentList: [
-            {
-              title: "Installing Vue JS",
-              status: "Completed",
-              time: "10m"
-            },
-            {
-              title: "Understand Vue Components",
-              status: "Completed",
-              time: "59m"
-            },
-            {
-              title: "Vue Templating",
-              status: "Playing",
-              time: "12m"
-            },
-            {
-              title: "Vue Forms",
-              status: "",
-              time: "23m"
-            },
-            {
-              title: "Vue Styling",
-              status: "",
-              time: "57m"
-            },
-            {
-              title: "Vue Routing",
-              status: "",
-              time: "1h 30m"
-            },
-            {
-              title: "Vue Animation",
-              status: "",
-              time: "1h 19m"
-            }
-          ]
         },
       ],
-      loading: true,
-      hash: "",
       expandedIndex: -1,
-      barSize: [],
-    }
-  },
-  mounted() {
+    };
   },
   methods: {
     setExpanded(index) {
-      if (this.expandedIndex === index) {
-        this.expandedIndex = -1;
-      } else {
-        this.expandedIndex = index;
-      }
+      this.expandedIndex = this.expandedIndex === index ? -1 : index;
     },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
-
-.info-text {
-  text-align: start;
+.title{
+  font-size: 18px;
+  font-family: Poppins-bold,system-ui;
+  color: #3E6CDE;
 }
-.info-text>*{
-  display: inline-block;
-  vertical-align: middle;
-}.competed-container{
-   height: 18px;
-   background-color: #1365E1;
-   color: white;
-   width: 50px;
-   font-size: 8px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 2px;
-   font-family: "Ubuntu-bold", sytem ui;
- }
-.playing-container{
-  width: 37px;
-  height: 18px;
-  background-color: #FE416D;
-  font-size: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
+.button {
+  padding: 15px 77px;
+  border-radius: 10px;
+  background-color: #3e6cde;
   color: white;
-  font-family: "Ubuntu-bold", sytem ui;
+  font-size: 16px;
+  margin-top: 20px;
+  font-family: Poppins-medium, system-ui;
+  box-shadow: 0 4px 45px rgba(0, 117, 255, 0.32);
+  margin-bottom: 38px;
 }
-.text_second_list{
-  color: rgba(27, 27, 27, 0.6);
-  font-size: 10px;
-  font-family: "Ubuntu-regular", sytem ui;
+.all_about {
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 27px;
+  font-size: 18px;
+  font-family: Poppins-regular, system-ui;
 }
-.item{
-  display: -webkit-flex;
+.title_about {
+  font-size: 18px;
+  font-family: Poppins-bold, system-ui;
+  color: #3e6cde;
+}
+.website {
+  font-family: Poppins-medium, system-ui;
+  font-size: 16px;
+  margin-bottom: 8px;
+  margin-top: 7px;
+}
+.about {
+  font-size: 16px;
+  font-family: Poppins-light, system-ui;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 49px;
+}
+.under_text {
+  margin-bottom: 15px;
   display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  background-color: rgba(249, 249, 249, 0.9);
-  border-radius: 18px;
-  margin-bottom: 4px;
-  padding: 10px 14px;
+  justify-content: space-between;
 }
-.item_head{
-  flex: auto;
-  text-align: start;
-  font-size: 10px;
-  color: rgba(27, 27, 27, 0.6);
-  font-family: "Ubuntu-regular", sytem ui;
+.left_text {
+  color: #3e6cde;
+  font-family: Poppins-light, system-ui;
+  font-size: 16px;
+}
+.right_text {
+  font-family: Poppins-light, system-ui;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  padding-right: 41px;
 }
 .content {
-
+  margin-top: 33px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
 }
-.blue_text{
-  font-size: 10px;
-  font-family: "Ubuntu-regular", sytem ui;
-  color: #1365E1;
-}
-.first-button {
-  margin-top: 40px;
-  padding-top: 10px;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-}
-.last-button {
-  padding-top: 10px;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
+.in_box {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
 }
 .show-container {
   overflow: hidden;
@@ -178,22 +136,17 @@ export default {
   padding: 0 4px;
 }
 .show-container.expanded {
-  max-height: 500px;
+  max-height: 700px;
 }
-.show-container>p {
+.show-container > p {
   text-align: start;
   color: rgba(0, 0, 0, 0.7);
   font-size: 12px;
   font-family: Inter-Light, system-ui;
 }
 .expandable-button {
-  background: #F4F4F4;
+  background: white;
   width: 100%;
-}
-.expandable-img {
-  width: 20px;
-  height: 20px;
-  align-self: center;
 }
 .expandable-letter {
   text-align: start;
@@ -205,20 +158,12 @@ export default {
   font-family: "Ubuntu-bold", sytem ui;
   border-radius: 18px;
 }
-.up-button {
-  padding: 15px 40px;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-}
 
-.expandable-title>span {
-  color: rgba(0,0,0,0.3);
+.expandable-title > span {
+  color: rgba(0, 0, 0, 0.3);
   font-family: Inter-SemiBold, system-ui;
 }
-
-.progress>p {
+.progress > p {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -228,12 +173,21 @@ export default {
   font-family: Inter-Regular, system-ui;
   font-size: 13px;
 }
-
-.block>p {
+.block > p {
   margin-top: 11px;
   color: white;
   font-family: Inter-Bold, system-ui;
   font-size: 13px;
 }
-
+.first-button {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.last-button {
+  padding-top: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 </style>

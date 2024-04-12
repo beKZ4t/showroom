@@ -6,6 +6,8 @@ import Profile from "@/views/profile/index.vue"
 import Search from "@/views/search/index.vue"
 import Job from "@/views/job_page/index.vue"
 import Request from "@/views/requests/index.vue"
+import Tasks from "@/views/tasks/index.vue"
+import Board from "@/views/board/index.vue"
 
 const routes = [
     {
@@ -37,6 +39,16 @@ const routes = [
         path: '/requests',
         name: 'requests',
         component: Request
+    },
+    {
+        path: '/tasks',
+        name: 'tasks',
+        component: Tasks
+    },
+    {
+        path: '/board',
+        name: 'board',
+        component: Board
     },
 
 ]

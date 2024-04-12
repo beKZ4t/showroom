@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  <router-view/>
 </template>
 
 <script>
@@ -17,6 +17,7 @@ body, html {
   padding: 0;
   min-width: 800px;
 }
+
 p {
   margin: 0;
   padding: 0;
