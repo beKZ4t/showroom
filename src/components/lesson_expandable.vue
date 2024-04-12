@@ -179,15 +179,5 @@ export default {
   font-family: Inter-Bold, system-ui;
   font-size: 13px;
 }
-.first-button {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.last-button {
-  padding-top: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
+
 </style>
