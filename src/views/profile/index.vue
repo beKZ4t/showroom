@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <div class="logout" @click="this.$router.push('/')">
+  <div class="logout" @click="this.$router.push('/search')">
     <img src="@/assets/images/logout.png" class="logout_img" alt="">
     <p>Logout</p>
   </div>

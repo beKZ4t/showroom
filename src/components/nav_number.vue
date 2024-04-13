@@ -11,27 +11,36 @@
     </div>
   </div>
 </template>
-<script >
+
+<script>
+import {ref} from 'vue';
+
 export default {
   name: "NavNuberComponent",
+  setup() {
+    const currentPage = ref(1);
+    const totalPages = ref(19); // Replace with your real value
+
+    const incrementPage = () => {
+      if (currentPage.value < totalPages.value) {
+        currentPage.value++;
+      }
+    };
+
+    const decrementPage = () => {
+      if (currentPage.value > 1) {
+        currentPage.value--;
+      }
+    };
+
+    return {
+      currentPage,
+      totalPages,
+      incrementPage,
+      decrementPage
+    };
+  }
 }
-import { ref } from 'vue';
-
-
-const currentPage = ref(1);
-const totalPages = ref(19); // Replace with your real value
-
-const incrementPage = () => {
-  if (currentPage.value < totalPages.value) {
-    currentPage.value++;
-  }
-};
-
-const decrementPage = () => {
-  if (currentPage.value > 1) {
-    currentPage.value--;
-  }
-};
 </script>
 
 <style scoped>
@@ -47,7 +56,7 @@ const decrementPage = () => {
   justify-content: space-between;
   align-items: center;
   width: 30%;
-  font-family: Poppins-regular,system-ui;
+  font-family: Poppins-regular, system-ui;
   font-size: 15px;
   color: #8E8E93;
 }

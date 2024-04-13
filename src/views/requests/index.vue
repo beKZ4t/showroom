@@ -10,7 +10,7 @@
     <accepted-cards-component/>
     <accepted-cards-component/>
     <accepted-cards-component/>
-
+    <nav-nuber-component/>
 
   </div>
 
@@ -26,55 +26,18 @@ import SearchComponent from "@/components/search.vue";
 import AcceptedCardsComponent from "@/components/accepted_card.vue";
 import LessonExpandableComponent from "@/components/lesson_expandable.vue";
 import ExpanComponent from "@/components/expan.vue";
+import NavNuberComponent from "@/components/nav_number.vue";
 
 export default defineComponent({
-  components: {ExpanComponent, LessonExpandableComponent, AcceptedCardsComponent, SearchComponent, NavbarComponent}
+  components: {
+    NavNuberComponent,
+    ExpanComponent, LessonExpandableComponent, AcceptedCardsComponent, SearchComponent, NavbarComponent}
 })
 
 
 </script>
 
 <style scoped>
-.container {
-  width: 200px;
-  height: 200px;
-  background-color: lightblue;
-  transition: all 0.3s ease;
-}
-
-.container.expanded {
-  width: 300px;
-  height: 300px;
-}
-
-.text {
-  display: none;
-}
-
-.container.expanded .text {
-  display: block;
-}
-
-
-/* Style the dropdown button */
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Style the dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
 
 /* Style the links inside the dropdown */
 .dropdown-content a {
