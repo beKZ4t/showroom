@@ -115,15 +115,16 @@ button{
   width: 225px;
   font-size: 20px;
   font-family: Poppins-semibold, system-ui;
-  margin-top: 0.83px;
-  margin-bottom: 18.17px;
   display: flex;
   justify-content: center;
   color: black;
+  margin: 26px auto 9px;
 }
 .second p{
   justify-content: center;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 .email{
   font-size: 16px;

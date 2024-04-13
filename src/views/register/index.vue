@@ -119,10 +119,12 @@ button{
   color: #3E6CDE;
 }
 .second{
+  height: 42px;
+  width: 261px;
+  text-align: center;
   font-size: 14px;
   font-family: Poppins-medium, system-ui;
-  margin-top: 0.83px;
-  margin-bottom: 18.17px;
+  margin: 13px auto 17px;
   display: flex;
   justify-content: center;
   color: black;

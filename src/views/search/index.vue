@@ -5,10 +5,11 @@
 
 
   <search-component/>
-  <cards-component/>
-  <cards-component/>
-  <cards-component/>
-  <cards-component/>
+  <lesson-expandable-component/>
+  <lesson-expandable-component/>
+  <lesson-expandable-component/>
+  <lesson-expandable-component/>
+
 
 
 
@@ -21,6 +22,7 @@ import NavbarComponent from "@/components/navbar.vue";
 import SearchComponent from "@/components/search.vue";
 import CardsComponent from "@/components/cards.vue";
 import HeaderTextComponent from "@/components/header_text.vue";
+import LessonExpandableComponent from "@/components/lesson_expandable.vue";
 </script>
 <style scoped>
 .main{

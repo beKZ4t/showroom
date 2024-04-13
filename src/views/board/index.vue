@@ -18,6 +18,7 @@
     <hr>
     <chat-component/>
 
+
   </div>
 </template>
 
@@ -27,8 +28,9 @@ import {defineComponent} from "vue";
 import NavbarComponent from "@/components/navbar.vue";
 import ChatComponent from "@/components/chat_websocced.vue";
 
+
 export default defineComponent({
-  components: {ChatComponent, NavbarComponent}
+  components: { ChatComponent, NavbarComponent}
 })
 </script>
 
