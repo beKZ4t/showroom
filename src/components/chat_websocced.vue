@@ -1,7 +1,8 @@
 <template>
+
+
   <div class="all_block">
     <div class="header">
-
       <div class="img_icon">
         <img src="@/assets/images/person_img.png" class="person_img">
         <div class="names">
@@ -34,8 +35,8 @@
       <img class="scrip" src="@/assets/images/scrip.png">
       <input type="text" placeholder="Message">
     </div>
-
   </div>
+
 </template>
 
 <script>
@@ -51,6 +52,9 @@ export default {
   box-shadow: 0 4px 50px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   margin-bottom: 32px;
+  position: absolute;
+  right: 5%;
+
 }
 
 .person_img {

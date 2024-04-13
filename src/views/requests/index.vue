@@ -6,7 +6,9 @@
       <span>Here are your responses and answers</span>
     </div>
     <search-component/>
-    <lesson-expandable-component/>
+    <accepted-cards-component/>
+    <accepted-cards-component/>
+    <accepted-cards-component/>
     <accepted-cards-component/>
 
 

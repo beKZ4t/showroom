@@ -16,7 +16,28 @@
       <div class="item">In Review</div>
     </div>
     <hr>
+    <div class="all_comp">
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+      <containers-component/>
+    </div>
+
     <chat-component/>
+
 
 
   </div>
@@ -27,14 +48,21 @@
 import {defineComponent} from "vue";
 import NavbarComponent from "@/components/navbar.vue";
 import ChatComponent from "@/components/chat_websocced.vue";
+import ContainersComponent from "@/components/containers.vue";
 
 
 export default defineComponent({
-  components: { ChatComponent, NavbarComponent}
+  components: {ContainersComponent, ChatComponent, NavbarComponent}
 })
 </script>
 
 <style scoped>
+.all_comp{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
 .main {
   width: 90%;
   margin-right: auto;

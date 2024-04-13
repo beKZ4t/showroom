@@ -1,26 +1,34 @@
 <template>
 
-    <div class="output">
-      <div class="navbar">
-        <div class="item" @click="this.$router.push('/search')">Search </div>
-        <div class="item" @click="this.$router.push('/tasks')">Tasks </div>
-        <div class="item" @click="this.$router.push('/requests')">Requests </div>
-        <div class="button" @click="this.$router.push('/profile')">
-          <img class="icon_img" src="@/assets/images/icon_profile.png">
-          <p>Ксения</p>
-        </div>
-
-
+  <div class="output">
+    <div class="navbar">
+      <div class="item" :class="{ active: isActive('/search') }" @click="navigate('/search')">Search </div>
+      <div class="item" :class="{ active: isActive('/tasks') }" @click="navigate('/tasks')">Tasks </div>
+      <div class="item" :class="{ active: isActive('/requests') }" @click="navigate('/requests')">Requests </div>
+      <div class="space"></div>
+      <div class="button" @click="navigate('/profile')">
+        <img class="icon_img" src="@/assets/images/icon_profile.png">
+        <p>Ксения</p>
       </div>
+
+
     </div>
+  </div>
 
 </template>
 
 <script>
 export default {
   name: "NavbarComponent",
+  methods: {
+    isActive(route) {
+      return this.$route.path === route;
+    },
+    navigate(route) {
+      this.$router.push(route);
+    }
+  }
 }
-
 </script>
 
 <style scoped>
@@ -47,7 +55,9 @@ export default {
   border-radius: 10px;
   font-family: Roboto-bold,system-ui;
   font-size: 18px;
-
+}
+.space{
+  flex: auto;
 }
 .item {
   cursor: pointer;
@@ -65,5 +75,8 @@ export default {
 .output{
   display: flex;
   justify-content: end;
+}
+.active {
+  color: #3E6CDE;
 }
 </style>
