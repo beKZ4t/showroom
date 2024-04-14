@@ -8,6 +8,7 @@ import Job from "@/views/job_page/index.vue"
 import Request from "@/views/requests/index.vue"
 import Tasks from "@/views/tasks/index.vue"
 import Board from "@/views/board/index.vue"
+import New from "@/views/new/index.vue"
 
 const routes = [
     {
@@ -49,6 +50,11 @@ const routes = [
         path: '/board',
         name: 'board',
         component: Board
+    },
+    {
+        path: '/new',
+        name: 'new',
+        component: New
     },
 
 ]

@@ -8,7 +8,7 @@
     <lesson-expandable-component/>
     <lesson-expandable-component/>
     <lesson-expandable-component/>
-    <nav-nuber-component/>
+   <nav-nuber-component/>
 
 
   </div>
@@ -22,7 +22,7 @@ import SearchComponent from "@/components/search.vue";
 import LessonExpandableComponent from "@/components/lesson_expandable.vue";
 import NavNuberComponent from "@/components/nav_number.vue";
 
-c
+
 </script>
 
 <style scoped>

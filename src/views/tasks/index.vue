@@ -5,15 +5,7 @@
       <p>Tasks</p>
       <span>Your work in organizations</span>
     </div>
-    <search-component/>
-    <div class="min_card">
-      <min-card-component/>
-      <min-card-component/>
-      <min-card-component/>
-      <min-card-component/>
-      <min-card-component/>
-      <min-card-component/>
-    </div>
+   <new-search-component/>
 
   </div>
 
@@ -25,9 +17,10 @@ import {defineComponent} from "vue";
 import NavbarComponent from "@/components/navbar.vue";
 import SearchComponent from "@/components/search.vue";
 import MinCardComponent from "@/components/min_card.vue";
+import NewSearchComponent from "@/components/new_cards_search.vue";
 
 export default defineComponent({
-  components: {MinCardComponent, SearchComponent, NavbarComponent}
+  components: {NewSearchComponent, MinCardComponent, SearchComponent, NavbarComponent}
 })
 </script>
 
